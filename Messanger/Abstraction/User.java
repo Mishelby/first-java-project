@@ -56,29 +56,14 @@ public abstract class User implements UserInfo {
     public void setUserId(int userId) {
         this.userId = userId;
     }
-
-    @Override
-    public void userStatus() {
-
+    public String isOrAre(){
+        if(userId > 1){
+            return "Are";
+        }
+        return "is";
+    }
+    public void userInfo(){
+        System.out.println("User name is " + getUserName() + ", " + "user id " + isOrAre() + " " + getUserId() + ", user login is " + getUserLogin());
     }
 
-    @Override
-    public void userEmail() {
-
-    }
-
-    @Override
-    public void userPassword() {
-
-    }
-
-    @Override
-    public void userName() {
-
-    }
-
-    @Override
-    public void userAge() {
-
-    }
 }
